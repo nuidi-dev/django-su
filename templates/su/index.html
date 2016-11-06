@@ -1,0 +1,16 @@
+
+{% include 'su/sumodel_form.html' %}
+
+<h3>Models list</h3>
+<table class="table table-striped">
+  {% for obj in object_list %}
+    <tr>
+      <td>
+        <a href="#">{{ obj.model }}</a>
+      </td>
+      <td>
+        <a href="{% url 'su_model_delete' obj.pk %}">delete</a>
+      </td>
+    </tr>
+  {% endfor %}
+</table>
