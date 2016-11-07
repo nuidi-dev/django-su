@@ -1,8 +1,17 @@
-<h1>New {{ model_name }} object</h1>
+{% extends 'su/base.html' %}
+
+{% load bootstrap_forms %}
+
+{% block content %}
+
+<h1>Create {{ model_name }} object</h1>
 <form action="{% url 'su_object_create' model_name %}" method="POST">
   {% csrf_token %}
   <table>
-    {{ form.as_table }}
+    {{ form|as_bootstrap }}
   </table>
-  <input type="submit" class="btn btn-default" />
+  <input type="submit" class="btn btn-success" value="Send" />
+  <a href="{% url 'su_objects' model_name %}" class="btn btn-default">Cancel</a>
 </form>
+
+{% endblock %}

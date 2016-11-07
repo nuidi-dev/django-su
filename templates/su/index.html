@@ -1,5 +1,8 @@
+{% extends 'su/base.html' %}
 
-{% include 'su/sumodel_form.html' %}
+{% block content %}
+
+<a class="btn btn-success" href="{% url 'su_model_create' %}">Add model</a>
 
 <h3>Models list</h3>
 <table class="table table-striped">
@@ -14,3 +17,4 @@
     </tr>
   {% endfor %}
 </table>
+{% endblock %}

@@ -56,7 +56,7 @@ class SuModelDelete(SuPermissionMixin, DeleteView):
         return reverse('su_index')
 
 class SuObjects(SuPermissionMixin, SuMixin, ListView):
-    template_name = 'su/su_objects.html'
+    template_name = 'su/su_objects_list.html'
 
 class SuObjectCreate(SuPermissionMixin, SuMixin, CreateView, ProcessFormView):
     template_name = 'su/su_object_create.html'
