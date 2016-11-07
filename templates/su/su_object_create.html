@@ -1,0 +1,8 @@
+<h1>New {{ model_name }} object</h1>
+<form action="{% url 'su_object_create' model_name %}" method="POST">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <input type="submit" class="btn btn-default" />
+</form>

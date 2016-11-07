@@ -1,0 +1,15 @@
+<a href="{% url 'su_object_create' model_name %}">Create new object</a>
+
+<table class="table table-striped">
+  {% for obj in object_list %}
+    <tr>
+      <td>
+        {{ obj }}
+      </td>
+      <td>
+        <a href="{% url 'su_object_update' model_name obj.pk %}">edit</a>
+        <a href="{% url 'su_object_delete' model_name obj.pk %}">delete</a>
+      </td>
+    </tr>
+  {% endfor %}
+</table>

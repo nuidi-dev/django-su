@@ -6,7 +6,7 @@
   {% for obj in object_list %}
     <tr>
       <td>
-        <a href="#">{{ obj.model }}</a>
+        <a href="{% url 'su_objects' obj %}">{{ obj.model }}</a>
       </td>
       <td>
         <a href="{% url 'su_model_delete' obj.pk %}">delete</a>

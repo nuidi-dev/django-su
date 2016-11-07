@@ -1,0 +1,4 @@
+<form action="{% url 'su_object_delete' model_name object.pk %}" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <input type="submit" value="Confirm" />
+</form>
